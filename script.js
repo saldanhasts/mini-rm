@@ -11,20 +11,20 @@ function atualizarTabela() {
   funcionarios.forEach((funcionario, index) => {
     const novaLinha = document.createElement("tr");
     novaLinha.innerHTML = `
-      <td>${funcionario.nome}</td>
-      <td>${funcionario.email}</td>
-      <td>${funcionario.empresa}</td>
-      <td>
-        <button class="action-btn edit-btn" onclick="editarFuncionario(${index})">✏️ Editar</button>
-        <button class="action-btn delete-btn" onclick="removerFuncionario(${index})">❌ Excluir</button>
+      <td data-label="Nome">${funcionario.nome}</td>
+      <td data-label="E-mail">${funcionario.email}</td>
+      <td data-label="Empresa">${funcionario.empresa}</td>
+      <td data-label="Ações">
+        <button class="action-btn edit-btn" onclick="editarFuncionario(${index})">Editar</button>
+        <button class="action-btn delete-btn" onclick="removerFuncionario(${index})">Excluir</button>
       </td>
     `;
     listaFuncionarios.appendChild(novaLinha);
   });
 
   contador.innerText = funcionarios.length > 0
-    ? `👥 ${funcionarios.length} funcionário(s) cadastrado(s)`
-    : "👥 Nenhum funcionário cadastrado";
+    ? `${funcionarios.length} funcionário(s) cadastrado(s)`
+    : "Nenhum funcionário cadastrado";
 
   localStorage.setItem("funcionarios", JSON.stringify(funcionarios));
 }
@@ -36,7 +36,7 @@ function adicionarOuEditarFuncionario() {
   const empresa = document.getElementById("empresa").value.trim();
 
   if (!nome || !email || !empresa) {
-    alert("⚠️ Por favor, preencha todos os campos!");
+    alert("Por favor, preencha todos os campos!");
     return;
   }
 
@@ -47,7 +47,7 @@ function adicionarOuEditarFuncionario() {
   } else {
     funcionarios[editIndex] = funcionario;
     editIndex = -1;
-    btnSalvar.innerText = "➕ Adicionar Funcionário";
+    btnSalvar.innerText = "Adicionar Funcionário";
   }
 
   document.getElementById("nome").value = "";
@@ -65,7 +65,7 @@ function editarFuncionario(index) {
   document.getElementById("empresa").value = funcionario.empresa;
 
   editIndex = index;
-  btnSalvar.innerText = "💾 Atualizar Funcionário";
+  btnSalvar.innerText = "Atualizar Funcionário";
 }
 
 // Remover funcionário
