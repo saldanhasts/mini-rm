@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini RM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>(Mini RM)</h1>
+    <p>Gerencie seus funcionários de forma simples e prática</p>
+  </header>
+
+  <div class="crm-container">
+    <!-- Formulário -->
+    <div class="form-section">
+      <input type="text" id="nome" placeholder="Nome do Funcionário">
+      <input type="email" id="email" placeholder="E-mail">
+      <input type="text" id="empresa" placeholder="Empresa">
+    </div>
+
+    <!-- Botão de adicionar/atualizar -->
+    <div class="btn-container">
+      <button id="btnSalvar" onclick="adicionarOuEditarFuncionario()">➕ Adicionar Funcionário</button>
+    </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+      <input type="text" id="pesquisa" placeholder="Pesquisar funcionário..." onkeyup="pesquisarFuncionario()">
+    </div>
+
+    <!-- Contador -->
+    <p id="contador">👥 Nenhum funcionário cadastrado</p>
+
+    <!-- Tabela -->
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Empresa</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="listaFuncionarios">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
