@@ -39,7 +39,7 @@ O sistema é **totalmente responsivo**, adaptando-se a desktops, tablets e smart
 
 ## 🎯 Objetivo do projeto
 
-- Colocar em prática **conhecimentos de front-end**.  
+- Colocar em prática **conhecimentos de front-end e lógica de programação**.  
 - Criar um código **limpo, organizado e bem comentado**, seguindo boas práticas.  
 - Desenvolver um sistema inspirado em produtos corporativos (como RM/TOTVS) para demonstrar um pouco da minha criatividade e capacidade técnica.  
 - Proporcionar uma aplicação prática que pode ser facilmente expandida ou integrada a sistemas maiores no futuro.
