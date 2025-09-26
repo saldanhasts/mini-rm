@@ -2,7 +2,7 @@
 
 <p align="center">
 Aplicação desenvolvida para treinar e demonstrar minhas habilidades em JavaScript, HTML e CSS, criando um sistema funcional inspirado em sistemas de gestão corporativa.  
-O Mini RM permite ao usuário gerenciar funcionários de forma prática, rápida e intuitiva, com foco em responsividade e usabilidade.
+O Mini RM permite ao usuário gerenciar funcionários de forma prática, rápida e intuitiva, com foco em responsividade e usabilidade.<br> Meu principal objetivo é testar meus conhecimentos em JavaScript antes de me aprofundar em frameworks
 </p>
 
 <br>
